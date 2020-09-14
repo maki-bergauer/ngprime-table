@@ -1,4 +1,5 @@
-<div class="" style="padding: 10px; display: flex; height: 100vh; border: 3px solid green; flex-direction: column; justify-content: space-between;">
+<div class=""
+    style="padding: 10px; display: flex; height: 100vh; border: 3px solid green; flex-direction: column; justify-content: space-between;">
     <p>it works...</p>
     <p-contextMenu #cm [model]="items"></p-contextMenu>
     <div class="" style="border: 1px solid red;">
@@ -12,11 +13,17 @@
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-product>
-                <tr [pContextMenuRow]="product">
+                <!-- <tr [pContextMenuRow]="product">
                     <td>{{product.code}}</td>
                     <td>{{product.name}}</td>
                     <td>{{product.category}}</td>
                     <td>{{product.price | currency: 'USD'}}</td>
+                </tr> -->
+                <tr [pContextMenuRow]="product">
+                    <app-tcell>{{product.code}}</app-tcell>
+                    <app-tcell>{{product.name}}</app-tcell>
+                    <app-tcell>{{product.category}}</app-tcell>
+                    <app-tcell>{{product.price | currency: 'USD'}}</app-tcell>
                 </tr>
             </ng-template>
         </p-table>
