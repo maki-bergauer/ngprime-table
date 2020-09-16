@@ -3,3 +3,11 @@
     margin: 0;
     padding: 0;
 }
+
+ul>li>a.active {
+    color: red;
+}
+
+ul>li {
+    margin: 10px;
+}

@@ -11,9 +11,9 @@ export class TabledataService {
 
   getProducts() : Observable<Product[]> {
     return of([
-      new Product(1, 'a1','b1','c1','d1'),
-      new Product(2, 'a2','b2','c2','d2'),
-      new Product(3, 'a3','b3','c3','d3'),
+      new Product(1, 'a1','b1','c1',15.70),
+      new Product(2, 'a2','b2','c2',1873.10),
+      new Product(3, 'a3','b3','c3',19.33),
     ]);
   }
 }
