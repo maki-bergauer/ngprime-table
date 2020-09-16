@@ -1,32 +1,37 @@
-import { Product } from './product.model';
-import { TabledataService } from './tabledata.service';
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: [``]
+  template: `
+  <div style="padding: 15px; margin: 20px auto; width: 1250px; border: 1px solid grey; ">
+    <ul>
+      <li>
+      <a routerLink="/t1" routerLinkActive="active">Basic Tabelle with context menu</a>
+      </li>
+      <li>
+      <a routerLink="/t2" routerLinkActive="active">resizable Tabelle</a>
+      </li>
+      <li>
+      <a routerLink="/t3" routerLinkActive="active">reordable Tabelle</a>
+      </li>
+      <li>
+      <a routerLink="/t4" routerLinkActive="active">filter on Tabelle</a>
+      </li>
+    </ul>
+    <br/>
+    <hr/>
+    <router-outlet></router-outlet>
+  </div>
+  `,
+  styles: [`
+    li {
+      list-style-type: none;
+    }
+  `]
 })
-export class AppComponent implements OnInit {
-  products: Product[];
+export class AppComponent {
 
-    selectedProduct: Product;
-    items: MenuItem[];
-
-    constructor(private productService: TabledataService) { }
-
-    ngOnInit() {
-        this.productService.getProducts().subscribe(data => this.products = data);
-
-        this.items = [
-            {label: 'View', icon: 'pi pi-fw pi-search', command: () => this.viewProduct(this.selectedProduct)}
-        ];
-    }
-
-    viewProduct(p: Product) {
-      alert(JSON.stringify(p));
-    }
+  constructor() { }
 }
 
 

@@ -5,6 +5,6 @@ export class Product {
         private code: string,
         private name: string,
         private category: string,
-        private quantity: string,
+        private price: number,
     ) {}
 }
