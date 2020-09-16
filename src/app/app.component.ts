@@ -14,6 +14,9 @@ import { Component } from '@angular/core';
       <li>
       <a routerLink="/t3" routerLinkActive="active">reordable Tabelle</a>
       </li>
+      <li>
+      <a routerLink="/t4" routerLinkActive="active">filter on Tabelle</a>
+      </li>
     </ul>
     <br/>
     <hr/>

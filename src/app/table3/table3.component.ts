@@ -14,12 +14,9 @@ import { Component, OnInit } from '@angular/core';
               <th *ngFor="let col of columns" pReorderableColumn>{{col.value}}</th>
           </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-product let-i="rowIndex">
+      <ng-template pTemplate="body" let-product let-i="rowIndex" let-cols="columns">
           <tr>
-          <td>{{product.code}}, index = {{i}}</td>
-          <td>{{product.name}}</td>
-          <td>{{product.category}}</td>
-          <td>{{product.price | currency: 'USD'}}</td>
+            <td *ngFor="let c of cols">{{product[c.value]}}</td>
           </tr>
       </ng-template>
   </p-table>

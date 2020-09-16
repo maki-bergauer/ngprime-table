@@ -6,7 +6,7 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-table1',
   template: `
-  <div class="card" style="padding: 10px; display: flex; height: 100vh; border: 3px solid green; flex-direction: column; justify-content: space-between;">
+  <div class="card" style="padding: 10px; display: flex; height: calc(100vh - 330px); border: 3px solid green; flex-direction: column; justify-content: space-between;">
   <p>it works...</p>
   <p-contextMenu #cm [model]="items"></p-contextMenu>
   <div class="" style="border: 1px solid red;">
