@@ -1,4 +1,3 @@
-import { AppComponent } from './../app.component';
 import { Product } from './../product.model';
 import { TabledataService } from './../tabledata.service';
 import { Component, OnInit } from '@angular/core';
@@ -7,11 +6,14 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-table3',
   template: `
   <div class="card">
-  <h5>Scrollable with Variable Width</h5>
+  <h2>Reordable columns</h2>
   <p-table [columns]="cols" [value]="products" [reorderableColumns]="true">
       <ng-template pTemplate="header" let-columns>
           <tr>
-              <th *ngFor="let col of columns" pReorderableColumn>{{col.value}}</th>
+            <ng-template ngFor let-col [ngForOf]="columns">
+              <th *ngIf="col.value==='category' || col.value==='price'" pReorderableColumn>{{col.value}}</th>
+              <th *ngIf="col.value!=='category' && col.value!=='price'">{{col.value}}</th>
+            </ng-template>
           </tr>
       </ng-template>
       <ng-template pTemplate="body" let-product let-i="rowIndex" let-cols="columns">

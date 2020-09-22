@@ -6,16 +6,19 @@ import { Component } from '@angular/core';
   <div style="padding: 15px; margin: 20px auto; width: 1250px; border: 1px solid grey; ">
     <ul>
       <li>
-      <a routerLink="/t1" routerLinkActive="active">Basic Tabelle with context menu</a>
+      <a routerLink="/table1" routerLinkActive="active">Basic Tabelle with context menu</a>
       </li>
       <li>
-      <a routerLink="/t2" routerLinkActive="active">resizable Tabelle</a>
+      <a routerLink="/table2" routerLinkActive="active">resizable Tabelle</a>
       </li>
       <li>
-      <a routerLink="/t3" routerLinkActive="active">reordable Tabelle</a>
+      <a routerLink="/table3" routerLinkActive="active">reordable Tabelle</a>
       </li>
       <li>
-      <a routerLink="/t4" routerLinkActive="active">filter on Tabelle</a>
+      <a routerLink="/table4" routerLinkActive="active">filter on Tabelle</a>
+      </li>
+      <li>
+      <a routerLink="/table5" routerLinkActive="active">multiselect and singleselect on Tabelle</a>
       </li>
     </ul>
     <br/>
