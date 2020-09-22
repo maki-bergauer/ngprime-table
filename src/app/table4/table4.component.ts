@@ -33,10 +33,17 @@ import { Component, OnInit } from '@angular/core';
       </ng-template>
       <ng-template pTemplate="body" let-product let-i="rowIndex">
           <tr>
+<<<<<<< HEAD
             <td>{{product[0].code}}</td>
             <td>{{product[0].name}}</td>
             <td>{{product[0].category}}</td>
             <td>{{product[0].price}}</td>
+=======
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.price | currency: 'USD'}}</td>
+>>>>>>> refs/remotes/origin/master
           </tr>
       </ng-template>
   </p-table>
@@ -47,7 +54,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Table4Component implements OnInit {
 
+<<<<<<< HEAD
   products: object;
+=======
+  products: Product[];
+>>>>>>> refs/remotes/origin/master
 
   cols = [
     { value: 'code' },
@@ -59,7 +70,11 @@ export class Table4Component implements OnInit {
   constructor(private productService: TabledataService) { }
 
   ngOnInit(): void {
+<<<<<<< HEAD
     this.productService.getProductsOtherStructure().subscribe(data => this.products = data);
+=======
+    this.productService.getProducts().subscribe(data => this.products = data);
+>>>>>>> refs/remotes/origin/master
   }
 
 }
